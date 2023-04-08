@@ -7,6 +7,7 @@ public class Radio {
     public int getCurrentRadioWave() {
         return currentRadioWave;
     }
+
     public int getCurrentVolume() {
         return currentVolume;
     }
