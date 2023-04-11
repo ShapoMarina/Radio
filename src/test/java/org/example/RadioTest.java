@@ -50,7 +50,7 @@ public class RadioTest {
 
         wave.nextRadioWave();
 
-        int expected = 1;
+        int expected = 0;
         int actual = wave.getCurrentRadioWave();
 
         Assertions.assertEquals(expected, actual);
@@ -179,6 +179,13 @@ public class RadioTest {
         int actual = wave.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test() {
+        Radio wave = new Radio();
+
+        Assertions.assertEquals(10, wave.getNumberOfRadio());
     }
 
 }

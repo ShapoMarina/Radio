@@ -1,8 +1,27 @@
 package org.example;
 
 public class Radio {
+    private int numberOfRadio = 10;
     private int currentRadioWave;
     private int currentVolume;
+
+
+    public Radio(int numberOfRadio) {
+        this.numberOfRadio = numberOfRadio;
+        this.currentRadioWave = currentRadioWave;
+        this.currentVolume = currentVolume;
+    }
+
+    public Radio() {
+        this.numberOfRadio = numberOfRadio;
+        this.currentRadioWave = currentRadioWave;
+        this.currentVolume = currentVolume;
+
+    }
+
+    public int getNumberOfRadio() {
+        return numberOfRadio;
+    }
 
     public int getCurrentRadioWave() {
         return currentRadioWave;
@@ -26,17 +45,17 @@ public class Radio {
         if (newCurrentRadioWave < 0) {
             return;
         }
-        if (newCurrentRadioWave > 9) {
+        if (newCurrentRadioWave > numberOfRadio - 1) {
             return;
         }
         currentRadioWave = newCurrentRadioWave;
     }
 
     public void nextRadioWave() {
-        if (currentRadioWave < 9) {
+        if (currentRadioWave < numberOfRadio - 1) {
             currentRadioWave = currentRadioWave + 1;
         } else {
-            currentRadioWave = 1;
+            currentRadioWave = 0;
         }
     }
 
@@ -44,7 +63,7 @@ public class Radio {
         if (currentRadioWave > 0) {
             currentRadioWave = currentRadioWave - 1;
         } else {
-            currentRadioWave = 9;
+            currentRadioWave = numberOfRadio - 1;
         }
     }
 
